@@ -1,0 +1,70 @@
+#name-div{
+    background-color: #eaf1f0;
+    width: 85vw;
+    height: 14vw;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation-name: collapseDiv;
+    animation-duration: 1.3s;
+    animation-timing-function: ease-in;
+    animation-delay: 1.6s;
+}
+
+#name-div::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 85vw;
+    width: 0;
+    height: 0;
+    border-top: 14vw solid #eaf1f0;
+    border-right: 15vw solid transparent;
+    animation-name: collapseAfter;
+    animation-duration: 1.3s;
+    animation-timing-function: ease-in;
+    animation-delay: 1.6s;
+}
+
+#name-inner{
+    margin: 0;
+    padding: 1vw;
+    animation-name: collapseDiv;
+}
+
+#name-span{
+    padding: 0;
+    margin: 0;
+}
+
+#intermidiate-text{
+    position: absolute;
+    top: 0;
+    left: 2vw;
+    z-index: -1;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 4vw;
+    font-weight: 500;
+}
+
+@keyframes collapseDiv {
+    99%{
+        width:0;
+    }
+    to{
+        width: 0;
+        display: none;
+    }
+}
+
+@keyframes collapseAfter {
+    99%{
+        left: 0;
+        border-right: 0 solid transparent;
+    }
+    100%{
+        left: 0;
+        border-right: 0 solid transparent;
+    }
+}
